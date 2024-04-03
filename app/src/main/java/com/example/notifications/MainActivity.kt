@@ -5,13 +5,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var notButton: Button
@@ -44,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             .setSmallIcon(android.R.drawable.ic_notification_overlay)
             .setContentTitle("Test Notifications")
             .setContentText("This is a test notification")
+            .setAutoCancel(true)
 
         val notificationIntent = Intent(this, MainActivity::class.java)
         val contentIntent = PendingIntent.getActivity(
