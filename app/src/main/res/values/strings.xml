@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Notifications</string>
+    <string name="desc">This is app is meant to test the working principle \n of Notifications</string>
+</resources>
